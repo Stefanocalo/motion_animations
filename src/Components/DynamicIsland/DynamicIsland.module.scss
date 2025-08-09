@@ -1,0 +1,80 @@
+$dynamicIslandWidth: 320px;
+$dynamicIslandInfoWidth: 220px;
+
+.diWrapper {
+  height: 50vw;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem
+}
+
+.dynamicIslandContainer {
+  background-color: #000;
+  border-radius: 99px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.expandedContainer {
+  width: calc($dynamicIslandWidth * 0.9);
+  height: 5rem;
+}
+
+.infoContainer {
+  width: $dynamicIslandInfoWidth;
+  height: 3rem;
+}
+
+.diContainer {
+  width: calc($dynamicIslandWidth * 1.1);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closedDynamicIsland {
+  width: 6rem;
+  height: 2rem;
+}
+
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.3rem 0.4rem;
+  border: 1px solid #c1c1c1;
+  border-radius: 20px;
+  width: calc($dynamicIslandWidth / 2 - 1.5rem);
+}
+
+.dContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 100%;
+}
+
+.dSection {
+  display: flex;
+  justify-content: center;
+
+  &:first-child {
+    align-items: flex-start;
+    padding-left: 0.8rem;
+  }
+
+  &:last-child {
+    align-items: flex-end;
+    padding-right: 0.8rem;
+  }
+}
