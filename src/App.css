@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
+/* ============================
+   CSS Reset & Base Styles
+   ============================ */
+
+/* 1. Use a more intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Improve text rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Set base font size and line height */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Ensure buttons look clickable */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 8. Remove text decoration from links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 9. Provide a default focus outline for accessibility */
+:focus {
+  outline: 2px solid #4d90fe;
+  outline-offset: 2px;
+}
+
+/* 10. Set up a main container helper class */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  padding: 1rem;
 }
