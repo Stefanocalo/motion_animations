@@ -45,8 +45,8 @@ function DynamicIsland() {
                         key={`${silentMode}-text`}
                         initial={{filter: 'blur(5px)', scale: 0.6}}
                         animate={{filter: 'blur(0px)', scale: 1}}
-                        exit={{filter: 'blur(5px)', scale: 0.6}}
-                        transition={{duration: 0.2, delay: dynamicIslandState === 'info' ? 0 : 0.2}}
+                        exit={{filter: 'blur(5px)', scale: 0.6, transition: {duration: 0.1}}}
+                        transition={{duration: 0.3, delay: dynamicIslandState === 'info' ? 0 : 0.2}}
                         style={{color: silentMode ? '#fc4c3b' : '#fff', fontWeight: 600}}
                         className={styles.dSection}>
                         {silentMode ? 'Silent' : 'Ring'}
